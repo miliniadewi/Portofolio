@@ -1,6 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Briefcase, FolderKanban, Mail, Linkedin, Github, FileText, ArrowRight, CheckCircle2, Award, Calendar, MapPin } from "lucide-react";
+import {
+  Briefcase,
+  FolderKanban,
+  Mail,
+  Linkedin,
+  Github,
+  FileText,
+  ArrowRight,
+  CheckCircle2,
+  Award,
+  Calendar,
+  MapPin,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -12,14 +24,46 @@ const PROFILE = {
   location: "Nganjuk, Indonesia",
   summary:
     "Hi, Im Milinia Sari Dewi, Im currently developing my expertise in Product & Project Management through a professional bootcamp program. My background combines experiences in stakeholder management, data analysis, market research, and evidence-based solution development, supported by a strong foundation in project management and product development.I’ve worked as a Research Assistant, where I supported both academic and field research by collecting, analyzing, and interpreting data into valuable insights. I also have hands-on experience in market research, identifying consumer behavior, business opportunities, and trends to support data-driven decision-making,I enjoy working in collaborative environments, solving problems with structured and innovative approaches, and helping projects and products achieve their objectives effectively.",
-  email: "miliniadewi17@gmail.com", // 
+  email: "miliniadewi17@gmail.com", //
   linkedin: "https://www.linkedin.com/in/miliniasaridewi/", // ← update this
 };
 
 const SKILLS = [
-  { group: "Soft Skill", items: ["Effective Communication","Empathy & Service Orientation","Negotiation & Persuasion","Collaboration & Teamwork", "Problem-Solving"] },
-  { group: "Hard Skill", items: ["Stakeholder Needs Analysis", "Product Management Basics", "Project Management Basics", "Monitoring & Evaluation", "Agricultural Extension", "Microsoft Office", "Data Analysis"] },
-  { group: "Tools", items: ["Discovery", "Problem Framing", "PRD & Specs", "Roadmapping", "Stakeholder Mgmt", "KPI/OKR", "BPMN Document", "Jira"] },
+  {
+    group: "Soft Skill",
+    items: [
+      "Effective Communication",
+      "Empathy & Service Orientation",
+      "Negotiation & Persuasion",
+      "Collaboration & Teamwork",
+      "Problem-Solving",
+    ],
+  },
+  {
+    group: "Hard Skill",
+    items: [
+      "Stakeholder Needs Analysis",
+      "Product Management Basics",
+      "Project Management Basics",
+      "Monitoring & Evaluation",
+      "Agricultural Extension",
+      "Microsoft Office",
+      "Data Analysis",
+    ],
+  },
+  {
+    group: "Tools",
+    items: [
+      "Discovery",
+      "Problem Framing",
+      "PRD & Specs",
+      "Roadmapping",
+      "Stakeholder Mgmt",
+      "KPI/OKR",
+      "BPMN Document",
+      "Jira",
+    ],
+  },
 ];
 
 const EXPERIENCES = [
@@ -45,7 +89,7 @@ const EXPERIENCES = [
       "Assisted the main researcher in research activities in terms of proposal development (drafting proposal, budget planning) and project report.",
       "Arranged field requirements such as interview guidelines, material, and other field requirements.",
       "Assisted research and community service activities.",
-      "Presented article research on International Conference on Disaster Management and Climate Change (ICoDMC) 2021."
+      "Presented article research on International Conference on Disaster Management and Climate Change (ICoDMC) 2021.",
     ],
   },
   {
@@ -54,16 +98,20 @@ const EXPERIENCES = [
     period: "January — March 2024",
     location: "Bogor, ID",
     bullets: [
-        "Planning and creating agricultural extension programs for farmer women’s groups in Bogor.",
-        "Serving as a facilitator for agro-educational tourism visits by 6 schools from West Java to BBP2TP.",
-        "Supporting the preparation of administrative reports related to the distribution of food security program assistance from the Ministry of Agriculture in Bogor.",
-        "Has input more than 500 data for the distribution administration report of the food security program from the Ministry of Agriculture."
-    ]
-  }
+      "Planning and creating agricultural extension programs for farmer women’s groups in Bogor.",
+      "Serving as a facilitator for agro-educational tourism visits by 6 schools from West Java to BBP2TP.",
+      "Supporting the preparation of administrative reports related to the distribution of food security program assistance from the Ministry of Agriculture in Bogor.",
+      "Has input more than 500 data for the distribution administration report of the food security program from the Ministry of Agriculture.",
+    ],
+  },
 ];
 
 const CERTS = [
-  { name: "Competency in Agricultural Counsellor-Facilitator", issuer: "BNSP ", year: "2021" }
+  {
+    name: "Competency in Agricultural Counsellor-Facilitator",
+    issuer: "BNSP ",
+    year: "2021",
+  },
 ];
 
 // ====== COMPONENTS ======
@@ -77,14 +125,18 @@ const Section = ({ id, title, icon: Icon, children }) => (
   <section id={id} className="scroll-mt-24 py-10">
     <div className="flex items-center gap-3 mb-6">
       <Icon className="h-5 w-5" />
-      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">{title}</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+        {title}
+      </h2>
     </div>
     {children}
   </section>
 );
 
 const Chip = ({ children }) => (
-  <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs sm:text-sm">{children}</span>
+  <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs sm:text-sm">
+    {children}
+  </span>
 );
 
 const LinkIcon = ({ href, label, Icon }) => (
@@ -106,17 +158,34 @@ export default function Portfolio() {
       {/* Header / Nav */}
       <header className="sticky top-0 z-30 backdrop-blur border-b bg-background/70">
         <div className="mx-auto max-w-6xl px-5 sm:px-8 py-3 flex items-center justify-between">
-          <a href="#home" className="font-semibold tracking-tight">{PROFILE.name}</a>
+          <a href="#home" className="font-semibold tracking-tight">
+            {PROFILE.name}
+          </a>
           <nav className="hidden sm:flex gap-4 text-sm">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#skills" className="hover:underline">Skills</a>
-            <a href="#experience" className="hover:underline">Experience</a>
-            <a href="#projects" className="hover:underline">Projects</a>
-            <a href="#contact" className="hover:underline">Contact</a>
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+            <a href="#skills" className="hover:underline">
+              Skills
+            </a>
+            <a href="#experience" className="hover:underline">
+              Experience
+            </a>
+            <a href="#projects" className="hover:underline">
+              Projects
+            </a>
+            <a href="#contact" className="hover:underline">
+              Contact
+            </a>
           </nav>
           <div className="flex items-center gap-2">
             {PROFILE.resumeUrl !== "#" && (
-              <a href={PROFILE.resumeUrl} className="text-sm underline flex items-center gap-2"><FileText className="h-4 w-4" /> Resume</a>
+              <a
+                href={PROFILE.resumeUrl}
+                className="text-sm underline flex items-center gap-2"
+              >
+                <FileText className="h-4 w-4" /> Resume
+              </a>
             )}
           </div>
         </div>
@@ -135,16 +204,35 @@ export default function Portfolio() {
             <h1 className="text-2xl sm:text-4xl font-bold leading-tight">
               {PROFILE.title}
             </h1>
-            <p className="mt-2 text-lg font-medium text-muted-foreground">{PROFILE.name}</p>
-            <p className="mt-4 max-w-prose text-sm sm:text-base leading-relaxed">{PROFILE.summary}</p>
+            <p className="mt-2 text-lg font-medium text-muted-foreground">
+              {PROFILE.name}
+            </p>
+            <p className="mt-4 max-w-prose text-sm sm:text-base leading-relaxed">
+              {PROFILE.summary}
+            </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <LinkIcon href={`mailto:${PROFILE.email}`} label={PROFILE.email} Icon={Mail} />
-              {PROFILE.linkedin && <LinkIcon href={PROFILE.linkedin} label="LinkedIn" Icon={Linkedin} />}
-              {PROFILE.github && <LinkIcon href={PROFILE.github} label="GitHub" Icon={Github} />}
+              <LinkIcon
+                href={`mailto:${PROFILE.email}`}
+                label={PROFILE.email}
+                Icon={Mail}
+              />
+              {PROFILE.linkedin && (
+                <LinkIcon
+                  href={PROFILE.linkedin}
+                  label="LinkedIn"
+                  Icon={Linkedin}
+                />
+              )}
+              {PROFILE.github && (
+                <LinkIcon href={PROFILE.github} label="GitHub" Icon={Github} />
+              )}
             </div>
             <div className="mt-6">
               <a href="#projects">
-                <Button className="group">View Projects <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-0.5 transition" /></Button>
+                <Button className="group">
+                  View Projects{" "}
+                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-0.5 transition" />
+                </Button>
               </a>
             </div>
             <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
@@ -154,12 +242,23 @@ export default function Portfolio() {
           <div>
             <Card className="overflow-hidden">
               <CardHeader>
-                <CardTitle className="text-base sm:text-lg flex items-center gap-2"><Briefcase className="h-4 w-4" /> Recent Highlights</CardTitle>
+                <CardTitle className="text-base sm:text-lg flex items-center gap-2">
+                  <Briefcase className="h-4 w-4" /> Recent Highlights
+                </CardTitle>
               </CardHeader>
               <CardContent className="grid gap-3 text-sm">
-                <div className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5" /> Launched automated regression suite improving release confidence.</div>
-                <div className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5" /> Facilitated scope alignment and reduced rework across squads.</div>
-                <div className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5" /> Built dashboards to track quality metrics across modules.</div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 mt-0.5" /> Launched automated
+                  regression suite improving release confidence.
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 mt-0.5" /> Facilitated scope
+                  alignment and reduced rework across squads.
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 mt-0.5" /> Built dashboards
+                  to track quality metrics across modules.
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -190,7 +289,9 @@ export default function Portfolio() {
           {EXPERIENCES.map((exp, idx) => (
             <Card key={idx}>
               <CardHeader>
-                <CardTitle className="text-base sm:text-lg">{exp.role} — {exp.company}</CardTitle>
+                <CardTitle className="text-base sm:text-lg">
+                  {exp.role} — {exp.company}
+                </CardTitle>
               </CardHeader>
               <CardContent className="text-sm sm:text-base">
                 <div className="flex flex-wrap gap-3 text-muted-foreground mb-3">
@@ -218,7 +319,9 @@ export default function Portfolio() {
                 <CardTitle className="text-base sm:text-lg">{p.name}</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-3">
-                <p className="text-sm sm:text-base text-muted-foreground">{p.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  {p.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {p.tags.map((t) => (
                     <Chip key={t}>{t}</Chip>
@@ -226,7 +329,13 @@ export default function Portfolio() {
                 </div>
                 <div className="flex gap-3">
                   {p.links?.map((l) => (
-                    <a key={l.label} className="text-sm underline" href={l.href}>{l.label}</a>
+                    <a
+                      key={l.label}
+                      className="text-sm underline"
+                      href={l.href}
+                    >
+                      {l.label}
+                    </a>
                   ))}
                 </div>
               </CardContent>
@@ -241,16 +350,32 @@ export default function Portfolio() {
           <CardContent className="py-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <h3 className="text-base sm:text-lg font-semibold">Let’s build something great</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">Reach me via email or LinkedIn. I usually respond within 1–2 business days.</p>
+                <h3 className="text-base sm:text-lg font-semibold">
+                  Let’s build something great
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Reach me via email or LinkedIn. I usually respond within 1–2
+                  business days.
+                </p>
               </div>
               <div className="flex flex-wrap gap-3">
                 <a href={`mailto:${PROFILE.email}`}>
-                  <Button variant="secondary" className="inline-flex items-center gap-2"><Mail className="h-4 w-4" /> Email</Button>
+                  <Button
+                    variant="secondary"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <Mail className="h-4 w-4" /> Email
+                  </Button>
                 </a>
                 {PROFILE.linkedin && (
-                  <a href={PROFILE.linkedin} target="_blank" rel="noreferrer noopener">
-                    <Button className="inline-flex items-center gap-2"><Linkedin className="h-4 w-4" /> LinkedIn</Button>
+                  <a
+                    href={PROFILE.linkedin}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <Button className="inline-flex items-center gap-2">
+                      <Linkedin className="h-4 w-4" /> LinkedIn
+                    </Button>
                   </a>
                 )}
               </div>
@@ -261,7 +386,10 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="pt-10 text-center text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} {PROFILE.name}. Built with React & Tailwind.</p>
+        <p>
+          © {new Date().getFullYear()} {PROFILE.name}. Built with React &
+          Tailwind.
+        </p>
       </footer>
     </Container>
   );
